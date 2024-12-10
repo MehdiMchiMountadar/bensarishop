@@ -1,0 +1,292 @@
+/* Fonts imports, Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Roboto:wght@400;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Cairo', 'Roboto', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+
+nav {
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+nav > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slideshow 10s linear infinite;
+    height: 100%;
+    white-space: nowrap;
+}
+
+nav > div > span {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 0px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes slideshow {
+    0% {left: 0;}
+    100% {left: -200%;}
+}
+
+
+#title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    padding: 5px 0px;
+    text-align: right;
+}
+
+#jogo {
+    padding: 0px 25px;
+}
+
+#jogo img {
+    height: 60px;
+}
+
+main {
+    height: auto;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+main img {
+    aspect-ratio: 1;
+    width: 70vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.567);
+    margin: 30px;
+}
+
+.product-info {
+    width: 70vh;
+    margin: 0px 10vh;
+}
+
+.product-info h1 {
+    color: black;
+}
+
+.product-info .pricetags {
+    display: flex;
+    font-size: 2rem;
+}
+
+.product-info .pricetags div {
+    margin-right: 15px;
+}
+
+.pricetags {
+    font-size: 1.5rem;
+}
+.pricetags .current-price-tag {
+    color: rgb(0, 84, 8);
+    font-weight: 900;
+}
+.pricetags .old-price-tag {
+    text-decoration: line-through;
+    color: red;
+    margin-left: 15px;
+
+}
+
+.product-info article {
+    width: 100%;
+    opacity: 0.8;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.order-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.inputs {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+    outline: 0;
+    background: white;
+}
+.inputs:hover {
+    border-color: rgb(158, 158, 255);
+}
+.inputs:focus {
+    border-radius: 0;
+    border-color: blue;
+}
+
+.inputs::placeholder {
+    font-size: 1.3rem;
+    font-family: 'Cairo', sans-serif;
+    text-align: right;
+}
+
+#buybtn:disabled {
+    cursor:not-allowed !important;
+    background-color: grey !important;
+    opacity: 0.5 !important;
+    color: white !important;
+} 
+
+.redborder, .redborder:hover, .redborder:focus {
+    border-color: red;
+}
+
+.checkout {
+    font-size: 1.5rem;
+    margin: 20px 0px ;
+    font-weight: bold;
+}
+
+#deliverycost, #total {
+    color: rgb(0, 84, 8);
+}
+
+.buy-wrapper {
+    width: 100%;
+    display: flex;
+    margin: 25px 0px;
+}
+    .buy-wrapper > div {
+        width: 20px ;
+    }
+
+    .buy-wrapper input[type="number"] {
+        width: 20%;
+        margin-right: 5px;
+        padding: 5px;
+        outline: 0;
+        border: 1px solid grey;
+        border-radius: 3px;
+        font-size: 2rem;
+    }
+    .buy-wrapper input[type="number"]:hover{
+        border:1px solid rgb(158, 158, 255);
+    }
+    .buy-wrapper #buybtn {
+        color: white;
+        width: 80%;
+        height: 55px;
+        background-color: rgb(0, 128, 0);
+        border: 0; outline: 0;
+        cursor: pointer;
+        border-radius: 3px;
+        transition-duration: 0.5s;
+    }
+    .buy-wrapper #buybtn:hover {
+        background-color: rgb(6, 95, 6);
+    }
+
+    .addminus {
+        background-color: rgb(251, 251, 251) ;
+        width: 20px ;
+        border-radius: 0px ;
+        font-size: 1.4rem ;
+        height: 50% ;
+        color: black ;
+        border: 1px solid grey ;
+    }
+    .addminus:nth-child(2) {
+        border-top: 0px;
+    }
+
+footer {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    font-size: .8rem;
+    color: white;
+}
+
+@media (max-width: 930px) {
+    main {
+        flex-direction: column;
+        place-items: center;
+    }
+    main img {
+        width: 90%;
+        margin: 15px 0px;
+    }
+    .product-info {
+        width: 100%;
+        padding: 15px;
+
+    }
+        .img-phone-cont {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    footer {
+        height: 100vh !important;
+    }
+
+    .pricetags {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #jogo img{
+        padding: 3px 0px;
+    }
+
+    #img-pc {
+        display: none;
+    }
+    #img-phone {
+        display: block;
+    }
+}
+
+@media (orientation:landscape) {
+    #img-pc {
+        display: block;
+    }
+    #img-phone {
+        display: none;
+    }
+}
+
+.space-between {
+    display: flex; justify-content: space-between;
+    font-size: 1.5rem ;
+}
+
+.opa70{opacity: .7}
