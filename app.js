@@ -1,4 +1,4 @@
-var binID = "64984a9b9d312622a3755c0c";
+var binID = "67584082e41b4d34e4630309";
 
 var nameElm = document.querySelector('#name');
 var phoneElm = document.querySelector('#phone');
@@ -97,8 +97,8 @@ async function sendOrder() {
     fetch('https://api.jsonbin.io/v3/b/'+binID, {
         method: 'GET',
         headers: {
-            'X-MASTER-KEY': '$2b$10$y558gdCBv36GFj23LrzbTuHOpS2ux62Py3Eln7PrwXB3vQPvs/xb.',
-            'X-ACCESS-KEY': '$2b$10$8R1SzYPNNDrFSVJJVINwnOPz6Xp4sSRBkW53GsiJvOiVEK9Uu.Mhe'
+                'X-MASTER-KEY': '$2a$10$QGv.G.dTqk7IQjWkdYT3huFHkeaZQkn45mL5QZlNpE56GIz.hnvuK',
+                'X-ACCESS-KEY': '$2a$10$neMuMWHLRS26EsJJo.R33.5coozIckVs5MNYkfUAG8kY4bQ3U8fWu'
         }
     }).then(response => {
         if (response.status === 200) {
@@ -112,8 +112,8 @@ async function sendOrder() {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'X-MASTER-KEY': '$2b$10$y558gdCBv36GFj23LrzbTuHOpS2ux62Py3Eln7PrwXB3vQPvs/xb.',
-                'X-ACCESS-KEY': '$2b$10$8R1SzYPNNDrFSVJJVINwnOPz6Xp4sSRBkW53GsiJvOiVEK9Uu.Mhe'
+                'X-MASTER-KEY': '$2a$10$QGv.G.dTqk7IQjWkdYT3huFHkeaZQkn45mL5QZlNpE56GIz.hnvuK',
+                'X-ACCESS-KEY': '$2a$10$neMuMWHLRS26EsJJo.R33.5coozIckVs5MNYkfUAG8kY4bQ3U8fWu'
             },
             body: JSON.stringify(rec)
         }).then(res => res.json())
