@@ -8,7 +8,7 @@ var quantityElm = document.querySelector('#quantity');
 
 var buybtn = document.querySelector('#buybtn')
 
-price = 2200
+price = 1500
 let activeColor;
 
 nameElm.oninput = phoneElm.oninput = adressElm.oninput = wilayaElm.oninput = (e) => {
